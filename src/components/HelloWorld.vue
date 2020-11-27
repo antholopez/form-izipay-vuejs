@@ -36,7 +36,7 @@ export default {
         KR.setFormConfig({
           formToken: this.formToken,
           "kr-language": "es-ES",
-          'kr-get-url-success': 'http://localhost:8080/payment-response'
+          'kr-get-url-success': (process.env.NODE_ENV === 'production' ? 'https://izipay-demo-vuejs.herokuapp.com/' : 'http://localhost:8080/') + 'payment-response'
         })
       )
       .then(({ KR }) =>
@@ -61,7 +61,7 @@ export default {
     },
 
     generatedFormToken: async function() {
-      const url = 'http://localhost:8080/api/Charge/CreatePayment/'; // Url del servicio mi cuenta web
+      const url =  (process.env.NODE_ENV === 'production' ? 'https://izipay-demo-vuejs.herokuapp.com/' : 'http://localhost:8080/') + 'api/Charge/CreatePayment/'; // Url del servicio mi cuenta web
       const token = this.encoded();
 
       const headers = {

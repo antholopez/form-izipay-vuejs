@@ -61,6 +61,7 @@ export default {
     },
 
     generatedFormToken: async function() {
+      console.log('Viendo el process env: ', process.env)
       const url =  (process.env.NODE_ENV === 'production' ? 'https://izipay-demo-vuejs.herokuapp.com/' : 'http://localhost:8080/') + 'api/Charge/CreatePayment/'; // Url del servicio mi cuenta web
       const token = this.encoded();
 

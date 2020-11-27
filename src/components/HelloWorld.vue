@@ -61,7 +61,7 @@ export default {
     },
 
     generatedFormToken: async function() {
-      const url =  (process.env.NODE_ENV === 'production' ? 'https://api.micuentaweb.pe/api-payment/V4/' : 'http://localhost:8080/') + 'api/Charge/CreatePayment/'; // Url del servicio mi cuenta web
+      const url =  (process.env.NODE_ENV === 'production' ? 'https://izipay-demo-vuejs.herokuapp.com/' : 'http://localhost:8080/') + 'api/Charge/CreatePayment/'; // Url del servicio mi cuenta web
       const token = this.encoded();
 
       const headers = {

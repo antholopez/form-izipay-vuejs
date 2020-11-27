@@ -68,7 +68,7 @@ export default {
         Authorization: `Basic ${token}`,
       };
       let paymentData = {
-        amount: 27146,
+        amount: 5000,
         currency: 'PEN',
         orderId: 'myOrderABC804',
         customer: {
@@ -81,7 +81,7 @@ export default {
         this.formToken  = data.answer.formToken
 
       } catch (error) {
-        console.log('Viendo el error...', error);
+        console.log('Viendo el error...', error.message);
       }    
     },
 

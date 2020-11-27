@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Formulario inscrustado VueJs"/>
+    <HelloWorld msg="Formulario inscrustado"/>
   </div>
 </template>
 
